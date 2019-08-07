@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(114, 162, 224);
+    margin: 0;
+    padding: 2rem 0;
+    width: 100%;
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    
+}
+
+main {
+    background:  white;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 2rem 0;
+}
+
+h1 {
+    margin: 3rem 1rem 3rem 1rem;
+    font-weight: 500;
+    font-size: 4em;
+    font-family: 'Indie Flower', cursive;
+    border: 1px solid rgb(184, 169, 169)
+
+}
+
+
+footer {
+    padding: 1rem;
+}
+
+.artObject {
+    max-width: 80%;
+    max-height: 30rem;
+    margin: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+#gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
