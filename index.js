@@ -351,15 +351,35 @@ function displayPainting(painting){
         gallery.appendChild(a)
 }
 
-
-        
-        //Display
-        function displayAllPaintings(paintings){
-        for(let i = 0; i < paintings.length; i++){
-            const currentPainting = paintings[i]
-            displayPainting(currentPainting) 
-        }
+function displayAllPaintings(paintings) {
+    for (let i = 0; i < paintings.length; i++) {
+      displayPainting(paintings[i])
     }
-    const paintings = data.artObjects
-    displayAllPaintings(paintings)
-    
+  }
+  
+  const paintings = data.artObjects
+  
+  displayAllPaintings(paintings)        
+
+        //Display
+        function passesAllCriteria(painting) {
+            const title = painting.longTitle
+            const year = title.substring(title.length - 4, title.length)
+          
+            return (
+              painting.webImage.width > 1500 &&
+              painting.principalOrFirstMaker !== 'Gerard van Honthorst' &&
+              year < 1800
+            )
+          }
+          
+          function displayAllPaintings(paintings) {
+            for (let i = 0; i < paintings.length; i++) {
+              const currentPainting = paintings[i]
+              if (passesAllCriteria(currentPainting)) {
+                displayPainting(currentPainting)
+              }
+            }
+          }
+passesAllCriteria
+
